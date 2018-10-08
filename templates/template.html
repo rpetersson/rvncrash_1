@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ravencrash - A social game for the addicted...</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+
+</head>
+<body>
+<div id="main_container">
+
+<div id="top_menu">
+    <div align="left" style="float: left">
+        <img src="{{ url_for("static", filename="img/rvn_logo.png") }}" height="50px" width="50px">
+        <a href="index">Home</a>
+        <a href="register">Register</a>
+        <a href="login">Login</a>
+        <a href="logout">Logout</a>
+    </div>
+
+    <div align="right" style="float:right; margin: 10px">
+        {{ current_user.get_id() }}
+    </div>
+
+
+
+</div>
+
+    <div id="crash_window">
+        {% block crash_window %}
+            <script>
+var targetContainer = document.getElementById("crash_window");
+var eventSource = new EventSource("/stream");
+eventSource.onmessage = function(e) {
+    console.log(e.data);
+    targetContainer.innerHTML = e.data;
+   // targetContainer.document.createElement(e.data)
+};
+</script>
+        {% endblock %}
+    </div>
+
+    <div id="place_bet_window">
+        {% block place_bet_window %}
+        {% endblock %}
+    </div>
+
+    <div id="placed_bet_window">
+        {% block placed_bet_window %}
+        {% endblock %}
+
+    </div>
+
+    <div id="chat_window">
+
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

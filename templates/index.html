@@ -1,0 +1,19 @@
+
+{% extends "template.html" %}
+
+
+{% block place_bet_window %}
+<form method="post">
+<ul>
+    <li>Bet:</li>
+    <li><input type="text" name="bet"></li>
+    <li>Cashout</li>
+    <li><input type="text" name="cashout"></li>
+    <li><input type="submit" value="Bet"></li>
+</ul>
+</form>
+{% endblock %}
+
+{% block placed_bet_window %}
+placed bet window
+{% endblock %}

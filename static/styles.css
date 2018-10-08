@@ -1,0 +1,8 @@
+
+body {background: black; color: white; margin: 5px;}
+#main_container {width: 100%; height: 100%; margin: 0px;}
+#crash_window {width: 500px; height: 250px; float: left; font-size: 100px; border: white dashed; margin: 5px; }
+#place_bet_window {width: 450px; height: 250px; float: left; font-size: 20px; border: white dashed; margin: 5px;}
+#placed_bet_window {width: 450px; height: 250px; float: left; font-size: 20px; border: white dashed; margin: 5px;}
+#chat_window {width: 970px; height: 300px; font-size: 150px; border: white dashed; margin: 5px; float: left}
+#top_menu {width: 95%; height: 70px; border: white dashed; margin: 2px; vertical-align: auto; position: relative}
